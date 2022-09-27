@@ -1,0 +1,24 @@
+﻿@model Tema5.ViewModels.ListaAfisare
+
+
+
+@{
+    if (Model != null && Model.ListaStudenti != null)
+    {
+        foreach (var Data in Model.ListaStudenti)
+        {
+            <tr>
+                <td> @Data.Id</td>
+                <td> @Data.FullName</td>
+                <td> @Data.CNP</td>
+                <td> @Data.Email</td>
+                <td> @Data.NameClass</td>
+                <td>@Html.ActionLink("Edit", "Editare", new { id = Data.Id })</td>
+                <td>@Html.ActionLink("Adauga", "AdaugaAbsente", new { id = Data.Id })</td>
+                <td>@Html.ActionLink("Vizualizare", "Absente", new { id = Data.Id })</td>
+            </tr>
+        }
+
+    }
+}
+

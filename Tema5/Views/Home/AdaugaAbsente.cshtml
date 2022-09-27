@@ -1,0 +1,31 @@
+﻿@model Tema5.ViewModels.AdaugaAbsente
+@{
+    ViewBag.Title = "AdaugaAbsente";
+}
+
+<h2>AdaugaAbsente</h2>
+<div class="panel panel-info">
+    <div class="panel-heading text-center"><h2>Absente</h2></div>
+    <div class="panel-body">
+        @using (Html.BeginForm("AdaugaAbsente", "Home", FormMethod.Post))
+        {@Html.HiddenFor(model => model.Id)
+        @Html.ValidationSummary();
+        <div class="form-group">
+            <label>Data:</label> @Html.TextBoxFor(x => x.Data, new { @class = "form-group" })
+        </div>
+
+        <div class="text-center">
+            <input class="btn-info" type="submit" value="Salveaza" />
+        </div>
+
+    }
+
+
+    </div>
+
+
+
+</div>
+
+
+

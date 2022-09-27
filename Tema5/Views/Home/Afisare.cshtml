@@ -1,0 +1,92 @@
+﻿@model  Tema5.ViewModels.ListaAfisare
+
+@{
+    ViewBag.Title = "Afisare";
+    string[] CapTabel = new string[] { "Id"
+      ,"FullName"
+  ,"CNP"
+  ,"Email"
+  ,"Clasa"
+  ,"Editare"
+  ,"Adauga Absente"
+  ,"Vizualizare Absente"
+
+};
+
+
+
+}
+<head>
+    <script>
+        $(document).ready(function () {
+            function getStudentiByClases(id) {
+
+                $.ajax({
+                    url: "/Home/GetStudentiTabelBody?clasaId="+id,
+                    type: 'GET',
+                    success: function (res) {
+                        $(".studenti-tabel-body").html(res);
+                        
+                    }
+                });
+
+            }
+            $(".clasa").on("change", function () {
+                var id = this.value;
+                getStudentiByClases(id);
+            });
+
+            $(".adauga").click(function () {
+                /*open("https://localhost:44338/Home/About", "Abaout");*/
+                /*  alert("incercare");*/
+                window.open("/Home/About","_self");
+            });
+
+        });
+        
+    </script>
+
+
+</head>
+
+
+<h2>Afisare</h2>
+<div class="text-left">
+    <img src="~/Poze/Adauga.png"class="adauga" />
+    @*@Html.ActionLink(" ", "About", null, new { @class = "fas fa-user-plus ", style = "font-size:24px;" })*@
+    <br />
+    <label>Clasa:</label>@Html.DropDownListFor(x => x.ClasaId, Model.Clasa, "Alege o clasa", new {@class="clasa" })
+
+</div>
+<div class="table table-bordered table-hover" >
+    <table style="width:100%">
+        <thead>
+            <tr>
+                @{
+                    foreach (var cap in CapTabel)
+                    {
+
+                        <th>@cap</th>
+
+                    }
+                }
+
+
+
+            </tr>
+        </thead>
+        <tbody class="studenti-tabel-body">
+        @Html.Partial("_StudentiTabelBody",Model)
+     </tbody>
+    </table>
+</div>
+<style>
+    .adauga {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+        cursor:pointer;
+
+    }
+
+</style>

@@ -1,0 +1,15 @@
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\Tema5Business.dll.config
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\Tema5Business.dll
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\Tema5Business.pdb
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\EntityFramework.dll
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\Tema5Data.dll
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\Tema5Data.pdb
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\Tema5Data.dll.config
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\EntityFramework.xml
+C:\Users\Manu\source\repos\Tema5\Tema5Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Manu\source\repos\Tema5\Tema5Business\obj\Debug\Tema5Business.csprojAssemblyReference.cache
+C:\Users\Manu\source\repos\Tema5\Tema5Business\obj\Debug\Tema5Business.csproj.CoreCompileInputs.cache
+C:\Users\Manu\source\repos\Tema5\Tema5Business\obj\Debug\Tema5Business.csproj.CopyComplete
+C:\Users\Manu\source\repos\Tema5\Tema5Business\obj\Debug\Tema5Business.dll
+C:\Users\Manu\source\repos\Tema5\Tema5Business\obj\Debug\Tema5Business.pdb

@@ -1,0 +1,38 @@
+﻿@model Tema5.ViewModels.AfisareAbsente
+@{
+    ViewBag.Title = "Absente";
+    int i=0;
+}
+
+<h1>Absente</h1>
+
+
+
+<div>
+    @foreach (var Data in Model.AfiasareAbs)
+    {
+        <span class="spatiere">@Data.Data</span>
+       
+
+        i++;
+        if (i % 5 == 0)
+        { 
+            <br />
+        }
+
+    }
+</div>
+
+<div class="text-center">
+    <p> @Model.Count</p>
+
+
+</div>
+<style>
+    .spatiere {
+        margin-bottom: 20px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+</style>

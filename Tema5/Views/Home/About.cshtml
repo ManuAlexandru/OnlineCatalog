@@ -1,0 +1,42 @@
+﻿@model Tema5.ViewModels.StudentVM
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="panel panel-success">
+    <div class="panel-heading text-center"><h4>Date Personale:</h4></div>
+    <div class="panel-body">
+        @using (Html.BeginForm("About", "Home", FormMethod.Post))
+        {
+            @Html.ValidationSummary()
+            <div class="form-group">
+                <label>Nume:</label> @Html.TextBoxFor(x => x.Nume, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label>Prenume:</label> @Html.TextBoxFor(x => x.Prenume, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label> @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>C.N.P:</label>@Html.TextBoxFor(x => x.CNP, new { @class = "form-control" })
+
+
+            </div>
+            <div class="form-group">
+                <label>Clasa:</label>@Html.DropDownListFor(x=>x.ClaseId,Model.Clase,"Alege o clasa")
+
+            </div>
+
+
+
+            
+            <div class="text-center">
+                <input class="btn btn-success" type="submit" value="Trimite-ti" />
+            </div>}
+    </div>
+</div>

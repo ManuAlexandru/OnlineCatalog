@@ -1,0 +1,74 @@
+﻿@model Tema5.ViewModels.ListOfClasses
+
+@{
+    ViewBag.Title = "IntroducereClase";
+    string[] CapTabel = new string[] { "Id"
+  ,"Clasa"
+
+
+
+
+};
+}
+
+<h2>IntroducereClase</h2>
+<div class="panel panel-info">
+    <div class="panel-heading text-center"><h4>Date Personale:</h4></div>
+    <div class="panel-body">
+        @using (Html.BeginForm("IntroducereClase", "Home", FormMethod.Post))
+        {@Html.ValidationSummary()
+        <div class="form-group">
+            <label>Clasa:</label>@Html.TextBoxFor(x => x.Nume, new { @class = "form-control" })
+
+
+        </div>
+
+        <div class="text-center">
+            <input class="btn btn-info" type="submit" value="Trimite" />
+        </div>
+
+    }
+    </div>
+</div>
+<h2>Afisare</h2>
+<div class="table table-bordered table-hover">
+    <table style="width:100%">
+        <thead>
+            <tr>
+                @{
+                    foreach (var cap in CapTabel)
+                    {
+
+                        <th>@cap</th>
+
+                    }
+                }
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model.ListaClase)
+                    {
+                        <tr>
+                            <td> @Data.Id</td>
+                            <td> @Data.Nume</td>
+                            
+
+                        </tr>
+                    }
+
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
